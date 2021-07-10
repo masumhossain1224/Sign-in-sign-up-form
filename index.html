@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>userlogin</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+</head>
+<body>
+	<div class="header_title"><h3>user<span>login</span></h3></div>
+	<div class="login-form">
+		<input type="radio" name="tab" class="tab" id="sign-up-tab" checked>
+		<label for="sign-up-tab" class="tab-header">Register</label>
+		<input type="radio" name="tab" class="tab" id="sign-in-tab" checked>
+		<label for="sign-in-tab" class="tab-header">Login</label>
+
+		<form id="form1">
+			<div class="form-input">
+				<input type="text" class="input" id="new-username" placeholder="Your Name" required>
+			</div>
+			<div class="form-input">
+				<input type="email" class="input" id="email" placeholder="Your Email" required>
+			</div>
+			<div class="form-input">
+				<input type="password" class="input" id="new-password" placeholder="Your Password" required>
+			</div>
+			<input type="submit" id="sign-up" class="submit-button" value="Login">
+		</form>
+		<form id="form2">
+			<div class="form-input">
+				<input type="text" class="input" id="username" placeholder="Username" required>
+				<i class="fas fa-user"></i>
+			</div>
+			<div class="form-input">
+				<input type="password" class="input" id="pswrd" placeholder="Password" required>
+				<i class="fas fa-lock" onclick="show()"></i>
+			</div>
+			<input type="checkbox" id="check"><span>Remember me</span><br>
+			<input type="submit" class="submit-button" id="sign-in" value="Login">
+		</form>
+	</div>
+
+	<script>
+		function show(){
+			var pswrd = document.getElementById('pswrd');
+			var icon = document.querySelector('.fas');
+			if(pswrd.type === "password"){
+				pswrd.type = "text";
+				pswrd.style.marginTop = "20px";
+			}else{
+				pswrd.type = "Password";
+			}
+		}
+	</script>
+
+</body>
+</html>
